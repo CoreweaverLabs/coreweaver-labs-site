@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= title %></title>
+<meta name="description" content="Coreweaver Labs pioneers decentralized agentic AI and autonomous systems for blockchain security. Contributors to Operon and the ARCTURA network.">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<meta property="og:title" content="<%= title %>">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://coreweaverlabs.com">
+<link rel="stylesheet" href="/css/main.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","@id":"https://coreweaverlabs.com/#org","name":"Coreweaver Labs","url":"https://coreweaverlabs.com","description":"Coreweaver Labs pioneers decentralized agentic AI and autonomous systems for blockchain security.","sameAs":["https://github.com/CoreweaverLabs","https://arctura.network","https://blockmachine.io"]}
+</script>
+</head>
+<body class="<%= page %>-page">
+
+<div id="cursor"></div>
+<canvas id="agent-canvas"></canvas>
+
+<nav class="nav">
+  <a href="/" class="nav-brand">
+    <div class="nav-brand-icon">
+      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 2L3 7.5L13 13L23 7.5L13 2Z" stroke="#4f46e5" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M3 18.5L13 24L23 18.5" stroke="#e8ff00" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M3 13L13 18.5L23 13" stroke="#818cf8" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <span class="nav-brand-name">Coreweaver<span>Labs</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="/" class="nav-link <%= page === 'home' ? 'active' : '' %>">Home</a>
+    <a href="/projects" class="nav-link <%= page === 'projects' ? 'active' : '' %>">Projects</a>
+    <a href="/stack" class="nav-link <%= page === 'stack' ? 'active' : '' %>">Stack</a>
+    <a href="/network" class="nav-link <%= page === 'network' ? 'active' : '' %>">Network</a>
+    <a href="/agent" class="nav-link <%= page === 'agent' ? 'active' : '' %>">Agent</a>
+    <a href="https://github.com/CoreweaverLabs" class="nav-link cta" target="_blank">GitHub →</a>
+  </div>
+</nav>

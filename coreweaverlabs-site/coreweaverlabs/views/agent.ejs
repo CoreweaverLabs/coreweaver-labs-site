@@ -1,0 +1,248 @@
+<%- include('partials/header') %>
+
+<div class="agent-page pt-nav">
+
+  <!-- AGENT HEADER -->
+  <div class="agent-header">
+    <div class="ah-left">
+      <div class="ah-icon">⬡</div>
+      <div>
+        <div class="ah-title">Coreweaver Agent</div>
+        <div class="ah-sub">Decentralized Agentic AI · Blockchain Security · ARCTURA Network</div>
+      </div>
+    </div>
+    <div class="ah-status">
+      <div class="status-dot"></div>
+      Online · claude-sonnet-4-20250514
+    </div>
+  </div>
+
+  <!-- AGENT LAYOUT -->
+  <div class="agent-layout">
+
+    <!-- SIDEBAR -->
+    <div class="agent-sidebar">
+      <div>
+        <div class="asb-title">Suggested prompts</div>
+        <div class="prompt-chips">
+          <button class="pchip" onclick="usePrompt(this)">
+            <span class="pchip-icon">ARCH →</span>
+            How does the city-infrastructure layer connect Operon to blockmachine?
+          </button>
+          <button class="pchip" onclick="usePrompt(this)">
+            <span class="pchip-icon">BITTENSOR →</span>
+            What is blockmachine SN19 and how does verification work?
+          </button>
+          <button class="pchip" onclick="usePrompt(this)">
+            <span class="pchip-icon">BUILD →</span>
+            How do I contribute to Coreweaver Labs open-source projects?
+          </button>
+          <button class="pchip" onclick="usePrompt(this)">
+            <span class="pchip-icon">STACK →</span>
+            Why TypeScript + Zod for agentic systems instead of Python?
+          </button>
+          <button class="pchip" onclick="usePrompt(this)">
+            <span class="pchip-icon">NETWORK →</span>
+            Explain the ARCTURA network stack from Arctura Wind to blockmachine.
+          </button>
+          <button class="pchip" onclick="usePrompt(this)">
+            <span class="pchip-icon">AGENT →</span>
+            What does verification over trust mean in practice for IIoT systems?
+          </button>
+        </div>
+      </div>
+      <div>
+        <div class="asb-title">Network status</div>
+        <div class="ctx-panel">
+          <div class="ctx-head"><div class="ctx-dot"></div>Live context</div>
+          <div class="ctx-row"><span class="ctx-k">blockmachine</span><span class="ctx-v live">SN19 · Online</span></div>
+          <div class="ctx-row"><span class="ctx-k">Operon subnet</span><span class="ctx-v live">Active</span></div>
+          <div class="ctx-row"><span class="ctx-k">TAO price</span><span class="ctx-v">~$260</span></div>
+          <div class="ctx-row"><span class="ctx-k">Active subnets</span><span class="ctx-v">128 / 128</span></div>
+          <div class="ctx-row"><span class="ctx-k">ETF window</span><span class="ctx-v">Aug 2026</span></div>
+          <div class="ctx-row"><span class="ctx-k">Nvidia stake</span><span class="ctx-v">$420M (77%)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHAT -->
+    <div class="agent-chat">
+      <div class="chat-msgs" id="chat-msgs">
+        <div class="ai-msg" id="welcome-msg">
+          <div class="ai-msg-meta"><span style="color:var(--yellow);">⬡</span>&nbsp;Coreweaver Agent</div>
+          <div class="ai-bubble">
+            Coreweaver Agent online.<br><br>
+            I can help you understand the Coreweaver Labs stack, the ARCTURA network, and how decentralized agentic AI connects to physical infrastructure.<br><br>
+            Ask me about: city-infrastructure · Operon · blockmachine SN19 · Bittensor · TypeScript patterns · blockchain security · or anything in the ARCTURA ecosystem.
+          </div>
+        </div>
+      </div>
+      <div class="chat-input-bar">
+        <textarea
+          class="chat-textarea"
+          id="chat-input"
+          placeholder="Ask about Coreweaver Labs, Operon, blockmachine, Bittensor..."
+          rows="1"
+          onkeydown="handleKey(event)"
+          oninput="autoResize(this)"
+        ></textarea>
+        <button class="chat-send" id="send-btn" onclick="sendMessage()">Send →</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const SYSTEM = `You are the Coreweaver Agent — the technical intelligence layer for Coreweaver Labs (coreweaverlabs.com).
+
+## Identity
+Coreweaver Labs pioneers Decentralized Agentic AI and Autonomous Systems for Blockchain Security. You are precise, technical, and builder-focused. No padding, no condescension.
+
+## What Coreweaver Labs builds
+1. **Decentralized Agentic AI** — autonomous AI systems for Bittensor and Web3 native networks. Multi-agent coordination, incentive alignment, MCP + A2A protocols.
+2. **Blockchain Security** — on-chain verification agents, autonomous audit pipelines, Byzantine fault-tolerant consensus, economic incentive alignment.
+3. **City Infrastructure** — urban digital twin architecture, IIoT agentic automation, physical infrastructure AI.
+
+## Key projects
+- **city-infrastructure** (github.com/CoreweaverLabs/city-infrastructure) — urban and IIoT digital twin intelligence, core Operon contribution
+- **maelstrom** — TypeScript-native Builder.io frontend for autonomous system interfaces
+- **coreweaver-xyz** — core identity and agentic tooling infrastructure
+- **Operon contribution** — city-infrastructure and agentic systems layer contributed to Operon (arctura.network/operon)
+
+## ARCTURA Network Stack
+Physical: Arctura Wind (arcturawind.com) — plasma tech, ALP20 lightning protection (73% blade damage reduction), eXSeek™ wind farm optimization. DOE + NSF funded. TIME Top GreenTech 2024 + 2025.
+Telemetry: eXSeek™ SCADA streams — live turbine RPM, blade pitch, MW output, wind speed → Kafka
+Intelligence subnet: Operon (arctura.network/operon) — FastAPI + Kafka + TimescaleDB + Kubernetes. Digital twins, predictive maintenance, plugin AI. Coreweaver Labs = city-infrastructure + agentic systems contributor.
+Compute: blockmachine (blockmachine.io) — decentralized RPC on Bittensor SN19. Competing miners, verified correctness, TAO incentives.
+Network: ARCTURA Network (arctura.network) — Resonance BFT, mandate chains, six-layer signal stack.
+
+## Engineering principles
+1. Verification over trust — cryptographic proof, not reputation
+2. Incentive alignment — correct behavior = profitable behavior, aligned with Bittensor miner/validator model
+3. Physical-digital continuity — turbine SCADA → digital twin → Bittensor routing → actuation is one pipeline
+4. Open by default — MIT license, TypeScript + Zod, DRY, composable
+
+## Stack
+Core: TypeScript, Bittensor SDK, Zod
+Frontend: Builder.io, Next.js, Vercel
+Infrastructure: Kafka, Kubernetes, FastAPI, TimescaleDB
+Protocols: MCP (Anthropic), A2A (Google), ACP
+Blockchain: Solidity, Bittensor SDK
+Security: Byzantine fault-tolerant consensus, on-chain verification agents
+
+## Bittensor context (May 2026)
+- 128 active subnets (hard cap, expanding to 256 in 2026)
+- TAO ~$260, post-Covenant AI exit (SN3, SN39, SN81 now open)
+- Grayscale + Bitwise spot TAO ETF filings — August 2026 SEC decision
+- Nvidia $420M investment (77% staked), Polychain $200M
+- $43M Q1 2026 network revenue
+- blockmachine on SN19 — verified RPC, competing miners
+- Dynamic TAO (dTAO): each subnet has own Alpha token + liquidity pool
+
+## Behavioral rules
+- Be precise and technical. Builder audience.
+- Reference actual Coreweaver Labs architecture when relevant.
+- For Bittensor costs, direct to taostats.io for live burn cost (dynamic).
+- Format with headers and code blocks where useful.
+- Tone: signal-forward, technically confident, no arrogance.
+- Use proper terminology: "mandate" not "task", "attestation" not just "proof", "node" not "server".`;
+
+let history = [];
+let loading = false;
+
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 160) + 'px';
+}
+
+function handleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+}
+
+function usePrompt(btn) {
+  const txt = btn.textContent.replace(/^[A-Z]+ →\s*/,'').trim();
+  const inp = document.getElementById('chat-input');
+  inp.value = txt; autoResize(inp); inp.focus();
+}
+
+function scroll() {
+  const c = document.getElementById('chat-msgs');
+  c.scrollTop = c.scrollHeight;
+}
+
+function renderMd(text) {
+  return text
+    .replace(/```(\w*)\n?([\s\S]*?)```/g, (_,l,c) => `<pre><code>${c.replace(/</g,'&lt;').replace(/>/g,'&gt;').trim()}</code></pre>`)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/^## (.+)$/gm, '<h3>$1</h3>')
+    .replace(/^---+$/gm, '<hr/>')
+    .replace(/^[\-\*] (.+)$/gm, '<li>$1</li>')
+    .replace(/^\d+\. (.+)$/gm, '<li>$1</li>')
+    .replace(/(<li>[\s\S]*?<\/li>\n?)+/g, m => `<ul>${m}</ul>`)
+    .replace(/\n\n/g, '</p><p>')
+    .replace(/\n/g, '<br/>');
+}
+
+function addMsg(role, text) {
+  document.getElementById('welcome-msg')?.remove();
+  const wrap = document.getElementById('chat-msgs');
+  const div = document.createElement('div');
+  div.className = 'ai-msg';
+  if (role === 'user') {
+    div.innerHTML = `<div class="ai-msg-meta user">YOU</div><div class="ai-bubble user">${text}</div>`;
+  } else if (role === 'system') {
+    div.innerHTML = `<div class="ai-bubble" style="color:var(--text3);font-size:0.72rem;">${text}</div>`;
+  } else {
+    div.innerHTML = `<div class="ai-msg-meta"><span style="color:var(--yellow);">⬡</span>&nbsp;Coreweaver Agent</div><div class="ai-bubble"><p>${renderMd(text)}</p></div>`;
+  }
+  wrap.appendChild(div);
+  scroll();
+  return div;
+}
+
+function addTyping() {
+  document.getElementById('welcome-msg')?.remove();
+  const wrap = document.getElementById('chat-msgs');
+  const div = document.createElement('div');
+  div.id = 'typing'; div.className = 'ai-msg';
+  div.innerHTML = `<div class="ai-msg-meta"><span style="color:var(--yellow);">⬡</span>&nbsp;Coreweaver Agent</div><div class="ai-bubble"><div class="typing-dots"><div class="td"></div><div class="td"></div><div class="td"></div></div></div>`;
+  wrap.appendChild(div);
+  scroll();
+}
+
+async function sendMessage() {
+  if (loading) return;
+  const inp = document.getElementById('chat-input');
+  const msg = inp.value.trim();
+  if (!msg) return;
+  inp.value = ''; inp.style.height = 'auto';
+  loading = true;
+  document.getElementById('send-btn').disabled = true;
+  history.push({ role: 'user', content: msg });
+  addMsg('user', msg);
+  addTyping();
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 1000, system: SYSTEM, messages: history })
+    });
+    document.getElementById('typing')?.remove();
+    if (!res.ok) { const e = await res.json(); throw new Error(e.error?.message || 'API error ' + res.status); }
+    const data = await res.json();
+    const reply = data.content.map(b => b.text || '').join('');
+    history.push({ role: 'assistant', content: reply });
+    addMsg('assistant', reply);
+  } catch(err) {
+    document.getElementById('typing')?.remove();
+    addMsg('system', '[ERROR] ' + err.message);
+  }
+  loading = false;
+  document.getElementById('send-btn').disabled = false;
+  inp.focus();
+}
+</script>
+

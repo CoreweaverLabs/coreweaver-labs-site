@@ -1,0 +1,102 @@
+<%- include('partials/header') %>
+
+<div class="pt-nav">
+
+<!-- STACK HERO — INDIGO BLOCK -->
+<section class="stack-hero">
+  <div class="container">
+    <div class="sh-label">Technology · Engineering</div>
+    <h1 class="sh-title">Built for<br><em>decentralized</em><br>reality.</h1>
+    <p class="sh-sub">TypeScript across every layer. Bittensor and blockchain-native integrations throughout. Four principles that govern how we build.</p>
+  </div>
+</section>
+
+<!-- STACK MATRIX -->
+<section class="stack-matrix-section">
+  <div class="sm-inner">
+    <div class="sm-label reveal">Technology matrix</div>
+    <div class="stack-matrix reveal">
+      <div class="sc core"><div class="sc-ico">⬡</div><div class="sc-name">TypeScript</div><div class="sc-cat">Language</div><div class="sc-bar"><div class="sc-fill" style="width:100%"></div></div></div>
+      <div class="sc core"><div class="sc-ico">◈</div><div class="sc-name">Bittensor SDK</div><div class="sc-cat">Network</div><div class="sc-bar"><div class="sc-fill" style="width:92%"></div></div></div>
+      <div class="sc"><div class="sc-ico">▸</div><div class="sc-name">Builder.io</div><div class="sc-cat">Frontend</div><div class="sc-bar"><div class="sc-fill" style="width:80%"></div></div></div>
+      <div class="sc"><div class="sc-ico">△</div><div class="sc-name">Vercel</div><div class="sc-cat">Deploy</div><div class="sc-bar"><div class="sc-fill" style="width:85%"></div></div></div>
+      <div class="sc"><div class="sc-ico">◎</div><div class="sc-name">Zod</div><div class="sc-cat">Validation</div><div class="sc-bar"><div class="sc-fill" style="width:95%"></div></div></div>
+      <div class="sc"><div class="sc-ico">⬡</div><div class="sc-name">Next.js</div><div class="sc-cat">Framework</div><div class="sc-bar"><div class="sc-fill" style="width:78%"></div></div></div>
+      <div class="sc"><div class="sc-ico">⌬</div><div class="sc-name">Kafka</div><div class="sc-cat">Streaming</div><div class="sc-bar"><div class="sc-fill" style="width:70%"></div></div></div>
+      <div class="sc"><div class="sc-ico">◉</div><div class="sc-name">MCP Protocol</div><div class="sc-cat">Agent Interface</div><div class="sc-bar"><div class="sc-fill" style="width:80%"></div></div></div>
+      <div class="sc core"><div class="sc-ico">⬡</div><div class="sc-name">blockmachine</div><div class="sc-cat">Compute · SN19</div><div class="sc-bar"><div class="sc-fill" style="width:88%"></div></div></div>
+      <div class="sc"><div class="sc-ico">◈</div><div class="sc-name">FastAPI</div><div class="sc-cat">API Layer</div><div class="sc-bar"><div class="sc-fill" style="width:65%"></div></div></div>
+      <div class="sc"><div class="sc-ico">△</div><div class="sc-name">Kubernetes</div><div class="sc-cat">Orchestration</div><div class="sc-bar"><div class="sc-fill" style="width:60%"></div></div></div>
+      <div class="sc"><div class="sc-ico">◎</div><div class="sc-name">Solidity</div><div class="sc-cat">Contracts</div><div class="sc-bar"><div class="sc-fill" style="width:55%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES + CODE EDITOR -->
+<section class="principles-section">
+  <div class="ps-inner">
+    <div class="ps-left">
+      <div class="ps-label reveal">Engineering Principles</div>
+      <div class="principle reveal">
+        <div class="p-n">01</div>
+        <div><div class="p-title">Verification over trust</div><div class="p-desc">Every data payload, agent action, and system state must be independently verifiable. No trust assumptions — cryptographic proof or it didn't happen. This is why we build on Bittensor and blockmachine's verified RPC layer.</div></div>
+      </div>
+      <div class="principle reveal reveal-d1">
+        <div class="p-n">02</div>
+        <div><div class="p-title">Incentive alignment</div><div class="p-desc">Agent behavior follows economic incentives. Systems are designed so correct behavior is the profitable behavior — aligned with Bittensor's miner/validator model and blockmachine's SN19 scoring protocol.</div></div>
+      </div>
+      <div class="principle reveal reveal-d2">
+        <div class="p-n">03</div>
+        <div><div class="p-title">Physical-digital continuity</div><div class="p-desc">City infrastructure, IIoT systems, and blockchain compute are one continuous layer — not separate domains. Operon's city-infrastructure module embodies this: turbine SCADA → digital twin → Bittensor-verified routing → actuation.</div></div>
+      </div>
+      <div class="principle reveal reveal-d3">
+        <div class="p-n">04</div>
+        <div><div class="p-title">Open by default</div><div class="p-desc">All Coreweaver Labs work is open-source under MIT unless a security constraint demands otherwise. TypeScript + Zod for type-safe, self-documenting systems. DRY. Composable. No proprietary lock-in.</div></div>
+      </div>
+    </div>
+    <div class="ps-right reveal">
+      <div class="ps-label">Reference implementation</div>
+      <div class="code-editor" style="margin-top:1.5rem;">
+        <div class="ed-tabs">
+          <div class="ed-tab active"><div class="ed-dot y"></div>agent.ts</div>
+          <div class="ed-tab"><div class="ed-dot"></div>verify.ts</div>
+          <div class="ed-tab"><div class="ed-dot"></div>city.ts</div>
+        </div>
+        <div class="ed-body">
+          <div class="l"><span class="ln">1</span><span class="cm">// Coreweaver Labs — Agentic Node</span></div>
+          <div class="l"><span class="ln">2</span><span class="kw">import</span> <span class="op">{</span> <span class="fn">AgentRuntime</span> <span class="op">}</span> <span class="kw">from</span> <span class="st">'@coreweaver/agents'</span></div>
+          <div class="l"><span class="ln">3</span><span class="kw">import</span> <span class="op">{</span> <span class="fn">BlockmachineVerifier</span> <span class="op">}</span> <span class="kw">from</span> <span class="st">'@arctura/blockmachine'</span></div>
+          <div class="l"><span class="ln">4</span><span class="kw">import</span> <span class="op">{</span> <span class="ty">z</span> <span class="op">}</span> <span class="kw">from</span> <span class="st">'zod'</span></div>
+          <div class="l"><span class="ln">5</span></div>
+          <div class="l"><span class="ln">6</span><span class="kw">const</span> <span class="fn">TelemetrySchema</span> <span class="op">=</span> <span class="ty">z</span><span class="op">.</span><span class="fn">object</span><span class="op">({</span></div>
+          <div class="l"><span class="ln">7</span><span class="i1">nodeId<span class="op">:</span> <span class="ty">z</span><span class="op">.</span><span class="fn">string</span><span class="op">(),</span></span></div>
+          <div class="l"><span class="ln">8</span><span class="i1">payload<span class="op">:</span> <span class="ty">z</span><span class="op">.</span><span class="fn">unknown</span><span class="op">(),</span></span></div>
+          <div class="l"><span class="ln">9</span><span class="i1">signature<span class="op">:</span> <span class="ty">z</span><span class="op">.</span><span class="fn">string</span><span class="op">(),</span></span></div>
+          <div class="l"><span class="ln">10</span><span class="op">})</span></div>
+          <div class="l"><span class="ln">11</span></div>
+          <div class="l"><span class="ln">12</span><span class="kw">async function</span> <span class="fn">runAgent</span><span class="op">(</span></div>
+          <div class="l"><span class="ln">13</span><span class="i1">runtime<span class="op">:</span> <span class="ty">AgentRuntime</span></span></div>
+          <div class="l"><span class="ln">14</span><span class="op">)<span class="op">:</span> <span class="ty">Promise</span><span class="op">&lt;</span><span class="ty">void</span><span class="op">&gt; {</span></span></div>
+          <div class="l"><span class="ln">15</span><span class="i1"><span class="kw">const</span> verifier <span class="op">=</span> <span class="kw">new</span> <span class="fn">BlockmachineVerifier</span><span class="op">({</span></span></div>
+          <div class="l"><span class="ln">16</span><span class="i2">subnet<span class="op">:</span> <span class="st">'SN19'</span><span class="op">,</span></span></div>
+          <div class="l"><span class="ln">17</span><span class="i2">threshold<span class="op">:</span> <span class="st">0.67</span></span></div>
+          <div class="l"><span class="ln">18</span><span class="i1"><span class="op">})</span></span></div>
+          <div class="l"><span class="ln">19</span></div>
+          <div class="l"><span class="ln">20</span><span class="i1"><span class="kw">await</span> runtime<span class="op">.</span><span class="fn">on</span><span class="op">(</span><span class="st">'telemetry'</span><span class="op">,</span> <span class="kw">async</span> <span class="op">(</span>raw<span class="op">) => {</span></span></div>
+          <div class="l"><span class="ln">21</span><span class="i2"><span class="kw">const</span> msg <span class="op">=</span> TelemetrySchema<span class="op">.</span><span class="fn">parse</span><span class="op">(</span>raw<span class="op">)</span></span></div>
+          <div class="l"><span class="ln">22</span><span class="i2"><span class="kw">const</span> ok <span class="op">=</span> <span class="kw">await</span> verifier<span class="op">.</span><span class="fn">verify</span><span class="op">(</span>msg<span class="op">)</span></span></div>
+          <div class="l"><span class="ln">23</span><span class="i2"><span class="kw">if</span> <span class="op">(!</span>ok<span class="op">)</span> <span class="kw">throw new</span> <span class="ty">Error</span><span class="op">(</span><span class="st">'consensus fail'</span><span class="op">)</span></span></div>
+          <div class="l"><span class="ln">24</span><span class="i2"><span class="kw">await</span> runtime<span class="op">.</span><span class="fn">emit</span><span class="op">(</span><span class="st">'verified'</span><span class="op">,</span> msg<span class="op">)</span></span></div>
+          <div class="l"><span class="ln">25</span><span class="i1"><span class="op">})</span></span></div>
+          <div class="l"><span class="ln">26</span><span class="op">}</span></div>
+          <div class="l"><span class="ln">27</span></div>
+          <div class="l"><span class="ln">28</span><span class="fn">runAgent</span><span class="op">(</span><span class="kw">new</span> <span class="fn">AgentRuntime</span><span class="op">())</span><span class="c-blink"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<%- include('partials/footer') %>

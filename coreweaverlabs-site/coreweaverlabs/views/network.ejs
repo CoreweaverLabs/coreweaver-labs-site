@@ -1,0 +1,111 @@
+<%- include('partials/header') %>
+
+<div class="pt-nav">
+
+<!-- NETWORK HERO -->
+<section class="network-hero">
+  <div class="nh-inner">
+    <div class="nh-label">ARCTURA Ecosystem · Network Map</div>
+    <h1 class="nh-title">The <em>network</em><br>we build on.</h1>
+    <p class="nh-sub">Coreweaver Labs operates as a node in the ARCTURA network — contributing infrastructure across physical, compute, and intelligence layers.</p>
+  </div>
+</section>
+
+<!-- NETWORK CARDS -->
+<section class="network-nodes-section">
+  <div class="nn-inner">
+    <div class="nn-label reveal">Network nodes</div>
+    <div class="network-cards reveal">
+
+      <div class="ncard core">
+        <div class="nc-tag">Intelligence Subnet</div>
+        <div class="nc-name"><a href="https://arctura.network/operon" target="_blank">Operon</a></div>
+        <div class="nc-desc">Industrial intelligence subnet of the ARCTURA network. Open-source IIoT platform powering eXSeek™ wind farm optimization. Digital twins, Kafka-native SCADA, blockmachine-verified compute. Coreweaver Labs contributed the city-infrastructure and agentic systems layer.</div>
+        <div class="nc-meta">arctura.network/operon · <span>Contributor: Coreweaver Labs</span></div>
+      </div>
+
+      <div class="ncard ind">
+        <div class="nc-tag">Compute Layer · SN19</div>
+        <div class="nc-name"><a href="https://blockmachine.io" target="_blank">blockmachine</a></div>
+        <div class="nc-desc">Decentralized, incentivized RPC and archive node network on Bittensor SN19. Competing miners, verified correctness, public performance dashboards. The compute backbone for Operon's data routing. TAO-incentivized integrity at every layer.</div>
+        <div class="nc-meta">blockmachine.io · <span>SN19 on Bittensor</span></div>
+      </div>
+
+      <div class="ncard cy">
+        <div class="nc-tag">Physical Layer · Wind Energy</div>
+        <div class="nc-name"><a href="https://www.arcturawind.com" target="_blank">Arctura Wind</a></div>
+        <div class="nc-desc">Hard technology for wind energy. ALP20 lightning protection deployed globally — 73% blade damage reduction, $30K–$50K per repair avoided. eXSeek™ wind farm optimization via live SCADA data. DOE-funded × 3, NSF-funded × 1. TIME Top GreenTech 2024 + 2025.</div>
+        <div class="nc-meta">arcturawind.com · <span>DOE + NSF Funded</span></div>
+      </div>
+
+      <div class="ncard">
+        <div class="nc-tag">Coordinating Network</div>
+        <div class="nc-name"><a href="https://arctura.network" target="_blank">ARCTURA Network</a></div>
+        <div class="nc-desc">The network entity that coordinates industrial intelligence, verified compute, and autonomous energy systems. Resonance BFT consensus, mandate chains, six-layer signal stack. Deployed on Bittensor. Maintained by virtualmase.</div>
+        <div class="nc-meta">arctura.network · <span>Resonance BFT</span></div>
+      </div>
+
+      <div class="ncard">
+        <div class="nc-tag">GEO Intelligence Layer</div>
+        <div class="nc-name"><a href="https://au-re.org" target="_blank">AURE</a></div>
+        <div class="nc-desc">Autonomous Resource Engine — the GEO and content intelligence layer for the ARCTURA ecosystem. SIGNAL, RESONANCE, SENTINEL, ECHO, VANGUARD, ARCTURA agents. Manages entity footprint, citation authority, and LLM retrievability across the network.</div>
+        <div class="nc-meta">au-re.org · <span>GEO + Entity Intelligence</span></div>
+      </div>
+
+      <div class="ncard core">
+        <div class="nc-tag">Infrastructure Contributor</div>
+        <div class="nc-name">Coreweaver Labs</div>
+        <div class="nc-desc">Pioneering Decentralized Agentic AI. Autonomous Systems for Blockchain Security. Contributed city-infrastructure and agentic systems layer to Operon. TypeScript-first, Bittensor-native, Builder.io frontend stack. Open-source under MIT.</div>
+        <div class="nc-meta">coreweaverlabs.com · <span>You are here</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- YELLOW BLOCK — ARCHITECTURE -->
+<section class="block-yellow" style="padding:5rem 2.5rem;">
+  <div class="by-inner">
+    <div class="reveal">
+      <div class="by-label">Data flow</div>
+      <h2 class="by-title">Turbine → <em>intelligence.</em></h2>
+      <p class="by-desc">The complete data path — from physical sensor to verified actuation signal — through the ARCTURA stack.</p>
+    </div>
+    <div class="stack-nodes reveal" style="margin-top:2.5rem;">
+      <div class="stack-node" style="background:rgba(2,2,5,0.06);outline-color:rgba(2,2,5,0.12);">
+        <div class="sn-tag" style="color:rgba(2,2,5,0.4);">Step 01</div>
+        <div class="sn-name" style="color:var(--void);">Sensor Ingestion</div>
+        <div class="sn-tech" style="color:rgba(2,2,5,0.5);">Live SCADA from turbine arrays → Operon's Kafka pipeline. RPM · blade pitch · MW output · wind speed · temperature.</div>
+        <div class="sn-badge" style="background:rgba(2,2,5,0.08);color:rgba(2,2,5,0.45);">kafka · scada</div>
+      </div>
+      <div class="stack-node" style="background:rgba(2,2,5,0.06);outline-color:rgba(2,2,5,0.12);">
+        <div class="sn-tag" style="color:rgba(2,2,5,0.4);">Step 02</div>
+        <div class="sn-name" style="color:var(--void);">Digital Twin Update</div>
+        <div class="sn-tech" style="color:rgba(2,2,5,0.5);">Each turbine's twin updated in real time. TimescaleDB maintains full time-series state. Deviations trigger anomaly pipeline.</div>
+        <div class="sn-badge" style="background:rgba(2,2,5,0.08);color:rgba(2,2,5,0.45);">timescaledb · digital twin</div>
+      </div>
+      <div class="stack-node" style="background:rgba(2,2,5,0.1);outline-color:rgba(2,2,5,0.2);">
+        <div class="sn-tag" style="color:rgba(2,2,5,0.5);">Step 03</div>
+        <div class="sn-name" style="color:var(--void);font-weight:700;">Coreweaver Labs — city-infrastructure</div>
+        <div class="sn-tech" style="color:rgba(2,2,5,0.55);">Agentic systems layer processes city-scale infrastructure state. Urban digital twin coordination across the full turbine array.</div>
+        <div class="sn-badge" style="background:rgba(2,2,5,0.1);color:rgba(2,2,5,0.5);">coreweaver · agentic</div>
+      </div>
+      <div class="stack-node" style="background:rgba(2,2,5,0.06);outline-color:rgba(2,2,5,0.12);">
+        <div class="sn-tag" style="color:rgba(2,2,5,0.4);">Step 04</div>
+        <div class="sn-name" style="color:var(--void);">blockmachine Verification</div>
+        <div class="sn-tech" style="color:rgba(2,2,5,0.5);">Data payloads routed through SN19. Competing miners independently verify. Consensus required before actuation signals issued.</div>
+        <div class="sn-badge" style="background:rgba(2,2,5,0.08);color:rgba(2,2,5,0.45);">blockmachine · sn19</div>
+      </div>
+      <div class="stack-node" style="background:rgba(2,2,5,0.06);outline-color:rgba(2,2,5,0.12);">
+        <div class="sn-tag" style="color:rgba(2,2,5,0.4);">Step 05</div>
+        <div class="sn-name" style="color:var(--void);">eXSeek™ Optimization</div>
+        <div class="sn-tech" style="color:rgba(2,2,5,0.5);">Verified state feeds eXSeek™. Operating point calculated continuously across the full fleet. Pure live-data optimization — no physics model required.</div>
+        <div class="sn-badge" style="background:rgba(2,2,5,0.08);color:rgba(2,2,5,0.45);">exseek™ · arctura wind</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<%- include('partials/footer') %>

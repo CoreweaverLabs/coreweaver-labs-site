@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= title %></title>
+<meta name="description" content="Coreweaver Labs pioneers decentralized agentic AI and autonomous systems for blockchain security. Contributors to Operon and the ARCTURA network.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="<%= title %>">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coreweaverlabs.com<%= page === 'home' ? '' : '/' + page %>">
+<link rel="canonical" href="https://coreweaverlabs.com<%= page === 'home' ? '' : '/' + page %>">
+<link rel="stylesheet" href="/css/main.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","@id":"https://coreweaverlabs.com/#org","name":"Coreweaver Labs","url":"https://coreweaverlabs.com","description":"Coreweaver Labs pioneers decentralized agentic AI and autonomous systems for blockchain security.","sameAs":["https://github.com/CoreweaverLabs","https://arctura.network"]}
+</script>
+</head>
+<body>
+
+<div id="cursor"></div>
+<canvas id="agent-canvas"></canvas>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-brand">
+    <div class="nav-brand-icon">
+      <svg viewBox="0 0 26 26" fill="none">
+        <path d="M13 2L3 7.5L13 13L23 7.5L13 2Z" stroke="#4f46e5" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M3 18.5L13 24L23 18.5" stroke="#e8ff00" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M3 13L13 18.5L23 13" stroke="#818cf8" stroke-width="1.5" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <span class="nav-brand-name">Coreweaver<span>Labs</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="/" class="nav-link">Home</a>
+    <a href="/projects" class="nav-link">Projects</a>
+    <a href="/stack" class="nav-link">Stack</a>
+    <a href="/network" class="nav-link">Network</a>
+    <a href="/agent" class="nav-link">Agent</a>
+    <a href="https://github.com/CoreweaverLabs" class="nav-link cta" target="_blank">GitHub →</a>
+  </div>
+</nav>
+
+<!-- PAGE CONTENT -->
+<%- body %>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-main">
+    <div class="foot-col">
+      <div class="foot-brand">Coreweaver<span>Labs</span></div>
+      <div class="foot-tag">Pioneering Decentralized Agentic AI<br>Autonomous Systems for Blockchain Security<br>coreweaverlabs.com</div>
+    </div>
+    <div class="foot-col">
+      <div class="foot-ct">Projects</div>
+      <a href="https://arctura.network/operon" target="_blank">Operon — ARCTURA</a>
+      <a href="https://github.com/CoreweaverLabs/city-infrastructure" target="_blank">city-infrastructure</a>
+      <a href="https://github.com/CoreweaverLabs/maelstrom" target="_blank">maelstrom</a>
+      <a href="https://github.com/CoreweaverLabs/coreweaver-xyz" target="_blank">coreweaver-xyz</a>
+    </div>
+    <div class="foot-col">
+      <div class="foot-ct">ARCTURA Network</div>
+      <a href="https://arctura.network" target="_blank">arctura.network</a>
+      <a href="https://blockmachine.io" target="_blank">blockmachine — SN19</a>
+      <a href="https://www.arcturawind.com" target="_blank">Arctura Wind</a>
+      <a href="https://au-re.org" target="_blank">AURE</a>
+    </div>
+    <div class="foot-col">
+      <div class="foot-ct">Connect</div>
+      <a href="https://github.com/CoreweaverLabs" target="_blank">GitHub</a>
+      <a href="https://github.com/virtualmase" target="_blank">virtualmase</a>
+      <a href="https://autonomousresourcemanagement.com" target="_blank">ARM Framework</a>
+      <a href="https://arm-agency.com" target="_blank">arm-agency.com</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div class="foot-copy">© 2026 Coreweaver Labs. MIT License. Built on Bittensor.</div>
+    <div class="foot-entity">Decentralized Agentic AI · Blockchain Security · ARCTURA Network Contributor<br>city-infrastructure · Operon · blockmachine SN19</div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
